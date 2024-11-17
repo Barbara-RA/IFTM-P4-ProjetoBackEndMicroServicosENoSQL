@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "394c9f7c-4597-40f9-8e71-e791a2f53a10",
+		"name": "user-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1330208"
+	},
+	"item": [
+		{
+			"name": "POST user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"João\",\n    \"cpf\": \"456\",\n    \"endereco\": \"Avenida Rondom\",\n    \"email\": \"joao@maria.com\",\n    \"telefone\": \"99999-9999\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user"
+			},
+			"response": []
+		},
+		{
+			"name": "GET all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user"
+			},
+			"response": []
+		},
+		{
+			"name": "GET findById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/67325e5521d198418b5a9d41"
+			},
+			"response": []
+		},
+		{
+			"name": "GET findByCpf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/456/cpf"
+			},
+			"response": []
+		},
+		{
+			"name": "GET findByCpf Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/456/cpf"
+			},
+			"response": []
+		},
+		{
+			"name": "GET search by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/search?nome=Jo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Jo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET pageable",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/pageable?size=2&page1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"pageable"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "page1",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PACTH user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"endereco\": \"Avenida Getulio Vargas\",\n    \"telefone\": \"12345-9999\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/67325e5521d198418b5a9d41"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/6732640d89df785b5cdd44aa"
+			},
+			"response": []
+		}
+	]
+}
