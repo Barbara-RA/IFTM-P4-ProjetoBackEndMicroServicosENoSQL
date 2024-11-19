@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://barbararamos:nqwEkMaNMurGOjZZ@barbarara.fpqhz.mongodb.net/
+      database: relacionamentos
