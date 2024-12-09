@@ -19,16 +19,22 @@ public class User {
 
     @Id
     private String id;
+    
     @Field("nome")
     private String nome;
+
     @Field("cpf")
     private String cpf;
+
     @Field("endereco")
     private String endereco;
+
     @Field("email")
     private String email;
+
     @Field("telefone")
     private String telefone;
+    
     @Field("dataCadastro")
     private LocalDateTime dataCadastro;
 

@@ -37,8 +37,7 @@ public class UserService {
     }
 
     public UserDTO delete(String userId) {
-        User user = userRepository
-                .findById(userId).orElseThrow(() -> new RuntimeException());
+        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException());
         userRepository.delete(user);
         return UserDTO.convert(user);
     }
